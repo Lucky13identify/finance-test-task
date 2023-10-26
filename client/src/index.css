@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* For react-transition-group */
+
+.fade-enter,
+.fade-exit {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 1000ms,
+    transform 1000ms;
+}
