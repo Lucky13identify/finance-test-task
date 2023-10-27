@@ -1,41 +1,26 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { TickersList } from './tickers';
+import { data } from '../oneTicker/oneTicker.test';
 import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import Tickers from './tickers'; // Подставьте правильный путь к вашему компоненту Tickers
+import { store } from '../../redux/store';
 
-const mockStore = configureStore(); // Создаем вспомогательное хранилище Redux
-
-describe('Tickers', () => {
-  it('renders the list of tickers', () => {
-    // Создаем фиктивное состояние Redux с тестовыми данными
-    const initialState = {
-      tickers: {
-        tickers: [
-          {
-            ticker: 'AAPL',
-            change: 10.0,
-            change_percent: '2.5%',
-            dividend: 1.5,
-            exchange: 'NASDAQ',
-            last_trade_time: '2023-10-25T14:30:00.000Z',
-            price: 150.0,
-            yield: 1.2,
-          },
-          // Добавьте другие тестовые данные, если необходимо
-        ],
-      },
-    };
-    const store = mockStore(initialState);
-
-    const { container } = render(
+describe('Tickers Component', () => {
+  it('should render container of tickers', () => {
+    render(
       <Provider store={store}>
-        <Tickers />
+        <TickersList key={data.id} ticker={data} />
       </Provider>
     );
 
-    // Проверьте, что Tickers компонент отобразил нужное количество тикеров
-    const tickerElements = container.querySelectorAll('.one-ticker'); // Замените '.one-ticker' на правильный селектор
-    expect(tickerElements.length).toBe(initialState.tickers.tickers.length);
+    expect(screen.getByText('Tickers:')).toBeInTheDocument();
+  });
+  it('snapshot', () => {
+    const list = render(
+      <Provider store={store}>
+        <TickersList key={data.id} ticker={data} />
+      </Provider>
+    );
+
+    expect(list).toMatchSnapshot();
   });
 });

@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OneTicker Component snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div
+      id="NotiflixNotifyWrap"
+      style="width: 280px; z-index: 4001; opacity: 1; right: 10px; top: 10px;"
+    >
+      <div
+        class="notiflix-notify notiflix-notify-info nx-with-animation nx-with-icon nx-fade   "
+        id="NotiflixNotify-1"
+        style="font-size: 13px; color: rgb(255, 255, 255); background: rgb(38, 192, 211); border-radius: 5px; pointer-events: all; font-family: \\"Quicksand\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, \\"Helvetica Neue\\", Arial, \\"Noto Sans\\", sans-serif; animation-duration: 400ms;"
+      >
+        <svg
+          class="nx-message-icon"
+          height="40"
+          viewBox="0 0 40 40"
+          width="40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M20 0c11.03,0 20,8.97 20,20 0,11.03 -8.97,20 -20,20 -11.03,0 -20,-8.97 -20,-20 0,-11.03 8.97,-20 20,-20zm0 37.98c9.92,0 17.98,-8.06 17.98,-17.98 0,-9.92 -8.06,-17.98 -17.98,-17.98 -9.92,0 -17.98,8.06 -17.98,17.98 0,9.92 8.06,17.98 17.98,17.98zm-0.99 -23.3c0,-0.54 0.44,-0.98 0.99,-0.98 0.55,0 0.99,0.44 0.99,0.98l0 15.86c0,0.55 -0.44,0.99 -0.99,0.99 -0.55,0 -0.99,-0.44 -0.99,-0.99l0 -15.86zm0 -5.22c0,-0.55 0.44,-0.99 0.99,-0.99 0.55,0 0.99,0.44 0.99,0.99l0 1.09c0,0.54 -0.44,0.99 -0.99,0.99 -0.55,0 -0.99,-0.45 -0.99,-0.99l0 -1.09z"
+              fill="rgba(0,0,0,0.2)"
+            />
+          </g>
+        </svg>
+        <span
+          class="nx-message nx-with-icon"
+        >
+          You have removed the AAPL ticker. To bring it back, please refresh the page.
+        </span>
+      </div>
+    </div>
+    <div>
+      <li
+        class="one-ticker"
+      >
+        <ul
+          class="sc-bdnyFh bItzgU"
+        >
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <p
+              class="sc-gtsqUy jxiwjj"
+              ticker="AAPL"
+            >
+              AAPL
+            </p>
+          </li>
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <p
+              class="sc-eCAqax fdESNb fade-enter fade-enter-active"
+              result=""
+            >
+              76,65$
+            </p>
+          </li>
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <p
+              class="sc-eCAqax fdESNb fade-enter fade-enter-active"
+              result=""
+            >
+              ↑ 6
+              %
+            </p>
+          </li>
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <p
+              class="sc-eCAqax fdESNb fade-enter fade-enter-active"
+              result="false"
+            >
+              ↑ 0,91
+            </p>
+          </li>
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <p
+              class="fade-enter fade-enter-active"
+            >
+              2,30
+            </p>
+          </li>
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <p
+              class="fade-enter fade-enter-active"
+            >
+              281 550
+               $
+            </p>
+          </li>
+          <li
+            class="sc-hKFymg eQwxfH"
+          >
+            <p>
+              NASDAQ
+            </p>
+          </li>
+          <li
+            class="sc-hKFymg eQwxfH"
+          >
+            <p>
+              10.27.2023
+               
+            </p>
+          </li>
+          <li
+            class="sc-dlniIP gcShLv"
+          >
+            <button
+              class="sc-jSFipO dYlyAM"
+              type="button"
+            >
+              Delete
+            </button>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </body>,
+  "container": <div>
+    <li
+      class="one-ticker"
+    >
+      <ul
+        class="sc-bdnyFh bItzgU"
+      >
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <p
+            class="sc-gtsqUy jxiwjj"
+            ticker="AAPL"
+          >
+            AAPL
+          </p>
+        </li>
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <p
+            class="sc-eCAqax fdESNb fade-enter fade-enter-active"
+            result=""
+          >
+            76,65$
+          </p>
+        </li>
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <p
+            class="sc-eCAqax fdESNb fade-enter fade-enter-active"
+            result=""
+          >
+            ↑ 6
+            %
+          </p>
+        </li>
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <p
+            class="sc-eCAqax fdESNb fade-enter fade-enter-active"
+            result="false"
+          >
+            ↑ 0,91
+          </p>
+        </li>
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <p
+            class="fade-enter fade-enter-active"
+          >
+            2,30
+          </p>
+        </li>
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <p
+            class="fade-enter fade-enter-active"
+          >
+            281 550
+             $
+          </p>
+        </li>
+        <li
+          class="sc-hKFymg eQwxfH"
+        >
+          <p>
+            NASDAQ
+          </p>
+        </li>
+        <li
+          class="sc-hKFymg eQwxfH"
+        >
+          <p>
+            10.27.2023
+             
+          </p>
+        </li>
+        <li
+          class="sc-dlniIP gcShLv"
+        >
+          <button
+            class="sc-jSFipO dYlyAM"
+            type="button"
+          >
+            Delete
+          </button>
+        </li>
+      </ul>
+    </li>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

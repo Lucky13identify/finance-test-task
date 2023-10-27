@@ -1,12 +1,14 @@
 import { useSelector } from 'react-redux';
 import { OneTicker } from '../oneTicker/oneTicker';
+import {
+  selectTickers,
+  selectdeletedTickers,
+} from '../../redux/tickers/selectors';
 import { Container, Head } from './tickers.styled';
 
 export function TickersList() {
-  const tickersStore = useSelector(state => state.tickers);
-  const deletedTickersStore = useSelector(
-    state => state.tickers.deletedTickers
-  );
+  const tickersStore = useSelector(selectTickers);
+  const deletedTickersStore = useSelector(selectdeletedTickers);
 
   const filteredTickers = tickersStore.tickers.filter(
     ticker => !deletedTickersStore.includes(ticker.ticker)

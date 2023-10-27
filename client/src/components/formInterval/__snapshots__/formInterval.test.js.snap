@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormForIntervalSet Component snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div
+      id="NotiflixNotifyWrap"
+      style="width: 280px; z-index: 4001; opacity: 1; right: 10px; top: 10px;"
+    >
+      <div
+        class="notiflix-notify notiflix-notify-success nx-with-animation nx-with-icon nx-fade   "
+        id="NotiflixNotify-1"
+        style="font-size: 13px; color: rgb(255, 255, 255); background: rgb(50, 198, 130); border-radius: 5px; pointer-events: all; font-family: \\"Quicksand\\", -apple-system, BlinkMacSystemFont, \\"Segoe UI\\", Roboto, \\"Helvetica Neue\\", Arial, \\"Noto Sans\\", sans-serif; animation-duration: 400ms;"
+      >
+        <svg
+          class="nx-message-icon"
+          height="40"
+          viewBox="0 0 40 40"
+          width="40"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M20 0c11.03,0 20,8.97 20,20 0,11.03 -8.97,20 -20,20 -11.03,0 -20,-8.97 -20,-20 0,-11.03 8.97,-20 20,-20zm0 37.98c9.92,0 17.98,-8.06 17.98,-17.98 0,-9.92 -8.06,-17.98 -17.98,-17.98 -9.92,0 -17.98,8.06 -17.98,17.98 0,9.92 8.06,17.98 17.98,17.98zm-2.4 -13.29l11.52 -12.96c0.37,-0.41 1.01,-0.45 1.42,-0.08 0.42,0.37 0.46,1 0.09,1.42l-12.16 13.67c-0.19,0.22 -0.46,0.34 -0.75,0.34 -0.23,0 -0.45,-0.07 -0.63,-0.22l-7.6 -6.07c-0.43,-0.35 -0.5,-0.99 -0.16,-1.42 0.35,-0.43 0.99,-0.5 1.42,-0.16l6.85 5.48z"
+              fill="rgba(0,0,0,0.2)"
+            />
+          </g>
+        </svg>
+        <span
+          class="nx-message nx-with-icon"
+        >
+          The current update interval is every 3 seconds.
+        </span>
+      </div>
+    </div>
+    <div>
+      <form
+        class="sc-bdnyFh lnmdIb"
+      >
+        <label
+          for="interval"
+        >
+          Set the interval in seconds.
+        </label>
+        <input
+          class="sc-gtsqUy fwNfbw"
+          id="interval"
+          name="interval"
+          type="text"
+          value=""
+        />
+        <button
+          class="sc-dlniIP gsDGzS"
+          data-testid="set-interval-button"
+          type="submit"
+        >
+          Set interval
+        </button>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="sc-bdnyFh lnmdIb"
+    >
+      <label
+        for="interval"
+      >
+        Set the interval in seconds.
+      </label>
+      <input
+        class="sc-gtsqUy fwNfbw"
+        id="interval"
+        name="interval"
+        type="text"
+        value=""
+      />
+      <button
+        class="sc-dlniIP gsDGzS"
+        data-testid="set-interval-button"
+        type="submit"
+      >
+        Set interval
+      </button>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

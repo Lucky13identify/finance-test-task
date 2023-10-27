@@ -1,36 +1,32 @@
-// Ваш файл теста (App.test.js)
-import { render, act } from '@testing-library/react';
+import { render, screen, waitFor, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
+import { store } from './redux/store';
 import App from './App';
-import { fetchTickers } from './redux/tickers/tickersOperations';
 
-const mockStore = configureStore([]);
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-jest.mock('./redux/tickers/tickersOperations', () => ({
-  fetchTickers: jest.fn(),
-}));
+describe('App Component', () => {
+  it('should render the App component and fetch tickers', async () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
 
-describe('App', () => {
-  it('renders the App component', async () => {
-    const store = mockStore({});
-
-    // Заглушка для fetchTickers
-    fetchTickers.mockImplementation(() => ({
-      type: 'FETCH_TICKERS',
-      payload: [], // Здесь может быть ваш тестовый результат
-    }));
-
-    // Запускаем компонент и ждем завершения действий
-    await act(async () => {
-      render(
-        <Provider store={store}>
-          <App />
-        </Provider>
-      );
+    await waitFor(() => {
+      expect(screen.getByText('AAPL')).toBeInTheDocument();
     });
 
-    // Проверяем, что fetchTickers был вызван
-    expect(fetchTickers).toHaveBeenCalled();
+    const input = screen.getByRole('textbox');
+    userEvent.clear(input);
+    userEvent.type(input, '10000');
+    act(() => {
+      userEvent.click(screen.getByText('Set interval'));
+    });
+
+    await sleep(100);
   });
 });

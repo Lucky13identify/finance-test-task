@@ -1,35 +1,60 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { OneTicker } from './oneTicker'; // Убедитесь, что вы используете правильный путь к компоненту
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { OneTicker } from './oneTicker';
+import { store } from '../../redux/store';
 
-describe('OneTicker', () => {
-  const tickerData = {
-    ticker: 'AAPL',
-    change: 10.0,
-    change_percent: '2.5%',
-    dividend: 1.5,
-    exchange: 'NASDAQ',
-    last_trade_time: '2023-10-25T14:30:00.000Z',
-    price: 150.0,
-    yield: 1.2,
-  };
+export const data = {
+  change: '76,65',
+  change_percent: '0.06',
+  dividend: '0.23',
+  exchange: 'NASDAQ',
+  id: 've6jdrk8ujr',
+  last_trade_time: '2023-10-27T11:14:53.000Z',
+  price: '281.55',
+  ticker: 'AAPL',
+  yield: '0.91',
+};
 
-  it('renders the ticker information', () => {
-    render(<OneTicker ticker={tickerData} />);
+describe('OneTicker Component', () => {
+  it('should render one ticker', () => {
+    render(
+      <Provider store={store}>
+        <OneTicker ticker={data} />
+      </Provider>
+    );
 
-    // Проверьте, что компонент отображает правильные данные на основе данных, переданных в props
-    expect(screen.getByText(tickerData.ticker)).toBeInTheDocument();
-    expect(screen.getByText(tickerData.change.toString())).toBeInTheDocument();
-    expect(screen.getByText(tickerData.change_percent)).toBeInTheDocument();
+    expect(screen.getByText('76,65$')).toBeInTheDocument();
+    expect(screen.getByText('↑ 6%')).toBeInTheDocument();
+    expect(screen.getByText('2,30')).toBeInTheDocument();
+    expect(screen.getByText('NASDAQ')).toBeInTheDocument();
+    expect(screen.getByText('10.27.2023')).toBeInTheDocument();
+    expect(screen.getByText('281 550 $')).toBeInTheDocument();
+    expect(screen.getByText('↑ 0,91')).toBeInTheDocument();
+    expect(screen.getByText('AAPL')).toBeInTheDocument();
+  });
+  it('test of removing a ticker', () => {
+    render(
+      <Provider store={store}>
+        <OneTicker ticker={data} />
+      </Provider>
+    );
+
+    const deleteButton = screen.getByText('Delete');
+    fireEvent.click(deleteButton);
+
     expect(
-      screen.getByText(tickerData.dividend.toString())
+      screen.getByText(
+        'You have removed the AAPL ticker. To bring it back, please refresh the page.'
+      )
     ).toBeInTheDocument();
-    expect(screen.getByText(tickerData.exchange)).toBeInTheDocument();
+  });
+  it('snapshot', () => {
+    const list = render(
+      <Provider store={store}>
+        <OneTicker ticker={data} />
+      </Provider>
+    );
 
-    // Используйте регулярное выражение для проверки формата даты
-    expect(screen.getByText(/(\d{2}.\d{2}.\d{4})/)).toBeInTheDocument();
-
-    expect(screen.getByText(tickerData.yield.toString())).toBeInTheDocument();
-    expect(screen.getByText(tickerData.price.toString())).toBeInTheDocument();
+    expect(list).toMatchSnapshot();
   });
 });

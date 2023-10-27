@@ -26,6 +26,8 @@ export function OneTicker({ ticker }) {
     setIsVisible(true);
   }, [change]);
 
+  const isNegativeChange = change && change.includes('-');
+
   const deleteTicker = () => {
     dispatch(removeTicker(ticker.ticker));
     Notiflix.Notify.info(
@@ -43,16 +45,20 @@ export function OneTicker({ ticker }) {
           <Value>
             {CreateCSSTransition(
               isVisible,
-              <ProfitOrLoss result={change.includes('-').toString()}>
-                {replaceDotsWithCommas(change)} $
+              <ProfitOrLoss
+                result={isNegativeChange ? isNegativeChange.toString() : ''}
+              >
+                {change ? replaceDotsWithCommas(change) + '$' : ''}
               </ProfitOrLoss>
             )}
           </Value>
           <Value>
             {CreateCSSTransition(
               isVisible,
-              <ProfitOrLoss result={change.includes('-').toString()}>
-                {change.includes('-')
+              <ProfitOrLoss
+                result={isNegativeChange ? isNegativeChange.toString() : ''}
+              >
+                {isNegativeChange
                   ? `↓ ${Math.floor(change_percent * 100)}`
                   : `↑ ${Math.floor(change_percent * 100)}`}
                 %
@@ -62,8 +68,8 @@ export function OneTicker({ ticker }) {
           <Value>
             {CreateCSSTransition(
               isVisible,
-              <ProfitOrLoss result={change.includes('-').toString()}>
-                {change.includes('-')
+              <ProfitOrLoss result={isNegativeChange.toString()}>
+                {isNegativeChange
                   ? `↓ ${replaceDotsWithCommas(ticker.yield)}`
                   : `↑ ${replaceDotsWithCommas(ticker.yield)}`}
               </ProfitOrLoss>
@@ -88,7 +94,9 @@ export function OneTicker({ ticker }) {
             <p>{formatTradeDate(last_trade_time)} </p>
           </TextAndTime>
           <Value>
-            <Button onClick={deleteTicker}>Delete</Button>
+            <Button type="button" onClick={deleteTicker}>
+              Delete
+            </Button>
           </Value>
         </Container>
       </li>
