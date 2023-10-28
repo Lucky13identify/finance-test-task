@@ -68,7 +68,7 @@ export const ProfitOrLoss = styled.p`
 
   color: ${props => (props.result === 'true' ? 'red' : 'green')};
   background-color: ${props =>
-    props.result === 'true' ? 'rgb(252,230,230)' : 'rgb(220,244,220);'};
+    props.result === 'true' ? 'rgb(252,230,230)' : 'rgb(220,244,220)'};
 `;
 
 export const Button = styled.button`

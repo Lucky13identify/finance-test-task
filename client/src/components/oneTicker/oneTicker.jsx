@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import Notiflix from 'notiflix';
-import { CreateCSSTransition } from '../../utils/cssTransition';
+import { createTransition } from '../../utils/cssTransition';
 import { thousandsSeparator } from '../../utils/formatNumberWithSpaces';
 import { replaceDotsWithCommas } from '../../utils/replaceDots';
 import { removeTicker } from '../../redux/tickers/tickersSlice';
@@ -16,6 +16,7 @@ import {
 } from './oneTicker.styled';
 
 export function OneTicker({ ticker }) {
+  const nodeRef = useRef(null);
   const dispatch = useDispatch();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -35,6 +36,20 @@ export function OneTicker({ ticker }) {
     );
   };
 
+  // const  = 300;
+
+  // const defaultStyle = {
+  //   transition: `opacity ${duration}ms ease-in-out`,
+  //   opacity: 0,
+  // };
+
+  // const transitionStyles = {
+  //   entering: { opacity: 1 },
+  //   entered: { opacity: 1 },
+  //   exiting: { opacity: 0 },
+  //   exited: { opacity: 0 },
+  // };
+
   return (
     <>
       <li className="one-ticker">
@@ -43,7 +58,8 @@ export function OneTicker({ ticker }) {
             <Ticker ticker={ticker.ticker}>{ticker.ticker}</Ticker>
           </Value>
           <Value>
-            {CreateCSSTransition(
+            {createTransition(
+              nodeRef,
               isVisible,
               <ProfitOrLoss
                 result={isNegativeChange ? isNegativeChange.toString() : ''}
@@ -53,7 +69,8 @@ export function OneTicker({ ticker }) {
             )}
           </Value>
           <Value>
-            {CreateCSSTransition(
+            {createTransition(
+              nodeRef,
               isVisible,
               <ProfitOrLoss
                 result={isNegativeChange ? isNegativeChange.toString() : ''}
@@ -66,9 +83,12 @@ export function OneTicker({ ticker }) {
             )}
           </Value>
           <Value>
-            {CreateCSSTransition(
+            {createTransition(
+              nodeRef,
               isVisible,
-              <ProfitOrLoss result={isNegativeChange.toString()}>
+              <ProfitOrLoss
+                result={isNegativeChange ? isNegativeChange.toString() : ''}
+              >
                 {isNegativeChange
                   ? `↓ ${replaceDotsWithCommas(ticker.yield)}`
                   : `↑ ${replaceDotsWithCommas(ticker.yield)}`}
@@ -76,13 +96,15 @@ export function OneTicker({ ticker }) {
             )}
           </Value>
           <Value>
-            {CreateCSSTransition(
+            {createTransition(
+              nodeRef,
               isVisible,
               <p>{replaceDotsWithCommas((dividend * 10).toFixed(2))}</p>
             )}
           </Value>
           <Value>
-            {CreateCSSTransition(
+            {createTransition(
+              nodeRef,
               isVisible,
               <p>{thousandsSeparator(price)} $</p>
             )}

@@ -54,52 +54,68 @@ Object {
           <li
             class="sc-dlniIP gcShLv"
           >
-            <p
-              class="sc-eCAqax fdESNb fade-enter fade-enter-active"
-              result=""
+            <div
+              style="transition: opacity 500ms ease-in-out; opacity: 1;"
             >
-              76,65$
-            </p>
+              <p
+                class="sc-eCAqax bwkcXI"
+                result=""
+              >
+                76,65$
+              </p>
+            </div>
           </li>
           <li
             class="sc-dlniIP gcShLv"
           >
-            <p
-              class="sc-eCAqax fdESNb fade-enter fade-enter-active"
-              result=""
+            <div
+              style="transition: opacity 500ms ease-in-out; opacity: 1;"
             >
-              ↑ 6
-              %
-            </p>
+              <p
+                class="sc-eCAqax bwkcXI"
+                result=""
+              >
+                ↑ 6
+                %
+              </p>
+            </div>
           </li>
           <li
             class="sc-dlniIP gcShLv"
           >
-            <p
-              class="sc-eCAqax fdESNb fade-enter fade-enter-active"
-              result="false"
+            <div
+              style="transition: opacity 500ms ease-in-out; opacity: 1;"
             >
-              ↑ 0,91
-            </p>
+              <p
+                class="sc-eCAqax bwkcXI"
+                result=""
+              >
+                ↑ 0,91
+              </p>
+            </div>
           </li>
           <li
             class="sc-dlniIP gcShLv"
           >
-            <p
-              class="fade-enter fade-enter-active"
+            <div
+              style="transition: opacity 500ms ease-in-out; opacity: 1;"
             >
-              2,30
-            </p>
+              <p>
+                2,30
+              </p>
+            </div>
           </li>
           <li
             class="sc-dlniIP gcShLv"
           >
-            <p
-              class="fade-enter fade-enter-active"
+            <div
+              style="transition: opacity 500ms ease-in-out; opacity: 1;"
             >
-              281 550
-               $
-            </p>
+              <p>
+                281 550
+                 $
+              </p>
+            </div>
           </li>
           <li
             class="sc-hKFymg eQwxfH"
@@ -150,52 +166,68 @@ Object {
         <li
           class="sc-dlniIP gcShLv"
         >
-          <p
-            class="sc-eCAqax fdESNb fade-enter fade-enter-active"
-            result=""
+          <div
+            style="transition: opacity 500ms ease-in-out; opacity: 1;"
           >
-            76,65$
-          </p>
+            <p
+              class="sc-eCAqax bwkcXI"
+              result=""
+            >
+              76,65$
+            </p>
+          </div>
         </li>
         <li
           class="sc-dlniIP gcShLv"
         >
-          <p
-            class="sc-eCAqax fdESNb fade-enter fade-enter-active"
-            result=""
+          <div
+            style="transition: opacity 500ms ease-in-out; opacity: 1;"
           >
-            ↑ 6
-            %
-          </p>
+            <p
+              class="sc-eCAqax bwkcXI"
+              result=""
+            >
+              ↑ 6
+              %
+            </p>
+          </div>
         </li>
         <li
           class="sc-dlniIP gcShLv"
         >
-          <p
-            class="sc-eCAqax fdESNb fade-enter fade-enter-active"
-            result="false"
+          <div
+            style="transition: opacity 500ms ease-in-out; opacity: 1;"
           >
-            ↑ 0,91
-          </p>
+            <p
+              class="sc-eCAqax bwkcXI"
+              result=""
+            >
+              ↑ 0,91
+            </p>
+          </div>
         </li>
         <li
           class="sc-dlniIP gcShLv"
         >
-          <p
-            class="fade-enter fade-enter-active"
+          <div
+            style="transition: opacity 500ms ease-in-out; opacity: 1;"
           >
-            2,30
-          </p>
+            <p>
+              2,30
+            </p>
+          </div>
         </li>
         <li
           class="sc-dlniIP gcShLv"
         >
-          <p
-            class="fade-enter fade-enter-active"
+          <div
+            style="transition: opacity 500ms ease-in-out; opacity: 1;"
           >
-            281 550
-             $
-          </p>
+            <p>
+              281 550
+               $
+            </p>
+          </div>
         </li>
         <li
           class="sc-hKFymg eQwxfH"

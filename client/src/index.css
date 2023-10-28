@@ -27,28 +27,17 @@ p {
 
 /* For react-transition-group */
 
-.fade-enter {
+.my-node-enter {
   opacity: 0;
-  transform: translateY(20px);
 }
-
-.fade-enter-active {
+.my-node-enter-active {
   opacity: 1;
-  transform: translateY(0);
-  transition:
-    opacity 1000ms,
-    transform 1000ms;
+  transition: opacity 500ms;
 }
-
-.fade-exit {
+.my-node-exit {
   opacity: 1;
-  transform: translateY(0);
 }
-
-.fade-exit-active {
+.my-node-exit-active {
   opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 1000ms,
-    transform 1000ms;
+  transition: opacity 500ms;
 }
